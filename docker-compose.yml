@@ -6,10 +6,11 @@ nameservice:
     PORT: "3000"
 
 mainservice:
-  image: kpsidd/main-svc:0.2
+  image: kpsidd/main-svc:0.4
   ports:
     - "3002:3000"
   environment:
     PORT: "3000"
+    NAMESERVICEPORT: "3000"
   links:
     - nameservice
