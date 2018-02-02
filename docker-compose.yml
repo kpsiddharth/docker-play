@@ -1,0 +1,15 @@
+nameservice:
+  image: kpsidd/name-svc:0.1
+  ports:
+    - "3001:3000"
+  environment:
+    PORT: "3000"
+
+mainservice:
+  image: kpsidd/main-svc:0.2
+  ports:
+    - "3002:3000"
+  environment:
+    PORT: "3000"
+  links:
+    - nameservice

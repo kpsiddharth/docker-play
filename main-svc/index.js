@@ -11,7 +11,7 @@ app.get('/:name', function (req, res) {
     name = req.params.name;
 
     request({
-      uri: 'http://namesvc/sayHello/'
+      uri: 'http://namesvc/sayHello/' + name
       },
       function(error, response, body) {
         if (!error && response.statusCode === 200) {
