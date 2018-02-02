@@ -1,0 +1,6 @@
+webservice:
+  image: kpsidd/name-svc:0.1
+  ports:
+    - "3001:3000"
+  environment:
+    PORT: "3000"
